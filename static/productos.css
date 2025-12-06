@@ -1,0 +1,90 @@
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header a {
+    background: #333;
+    color: white;
+    position:relative;
+    left: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+}
+.header {
+    background: #333;
+    color: white;
+    padding: 1%;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer{
+    background-color: #333;
+    padding: 1%;
+    margin: 0%;
+    text-align: center;
+    
+}
+.header > *:last-child {
+    position: relative;
+    left: 50%;
+}
+
+.tabla-contenedor {
+    width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.tabla-productos th, 
+.tabla-productos td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-productos th {
+    background: #333;
+    color: white;
+}
+
+.img-producto {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.activo {
+    color: green;
+    font-weight: bold;
+}
+
+.inactivo {
+    color: red;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.icono {
+    width: 32px;     /* tamaño del icono */
+    height: 32px;
+    object-fit: contain;
+    cursor: pointer;
+    margin-right: 10px; /* pequeño espacio entre iconos */
+}
+

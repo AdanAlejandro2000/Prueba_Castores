@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="../static/productos.css">
+</head>
+<body>
+<div class="header">
+    <p class="admin"><a href="/almacenista_panel">Restar</a></p>
+    <h2 class="titulo">Inventario de Productos</h2>
+    <p><a href="https://castores.com.mx/">Visitanos aquí</a></p>
+</div>
+
+<div class="tabla-contenedor">
+<table class="tabla-productos">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Estatus</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for p in productos %}
+        <tr>
+            <td>
+                {% if p.ImagenRuta %}
+                    <img src="{{ p.ImagenRuta }}" class="img-producto">
+                {% else %}
+                    <span>Sin imagen</span>
+                {% endif %}
+            </td>
+
+            <td>{{ p.Nombre }}</td>
+            <td>{{ p.CantidadActual }}</td>
+
+            <td>
+                {% if p.Estatus == 1 %}
+                    <span class="activo">Activo</span>
+                {% else %}
+                    <span class="inactivo">Inactivo</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<br><br>
+<div class="footer">
+    <p>CONTACTANOS</p> <br>
+
+    <a href="https://www.facebook.com/GrupoCastores">
+        <img src="../static/imagenes/facebook.png" class="icono">
+    </a>
+    <a href="https://www.instagram.com/grupo_castores">
+        <img src="../static/imagenes/instagram.png" class="icono">
+    </a>
+    <a href="https://www.linkedin.com/company/transportes-castores/">
+        <img src="../static/imagenes/linkedin.png" class="icono">
+    </a>
+
+</div>
+
+</body>
+</html>

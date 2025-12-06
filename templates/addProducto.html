@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrega tu producto</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="contenedor" id="contenedor">
+        <form method="POST" enctype="multipart/form-data">
+            <h2>Ingrese datos</h2>
+
+            <input type="text" name="name_product" id="name_product" placeholder="Nombre del producto" required>
+            <input type="number" name="qty" id="qty" placeholder="Cantidad" required>
+            <label for="img">Imagen del producto</label>
+            <input type="file" name="img" accept="image/*" required>
+            <button id="btn_agregar" class="btn_agregar">Agregar</button> <br>
+            <a href="/productos"> Ir a los productos</a>
+</body>
+        </form>
+    </div>
+
+    
+</html>

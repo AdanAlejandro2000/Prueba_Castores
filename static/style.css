@@ -1,0 +1,44 @@
+body {
+    background-image: url("imagenes/Fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.contenedor {
+    width: 350px;
+    background-color: aliceblue;
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #aaa;
+    text-align: center;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    width: 95%;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.btn_agregar {
+    text-align: center;
+}

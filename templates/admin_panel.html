@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="../static/productos.css">
+</head>
+<body>
+
+<div class="header">
+    <h2 class="titulo">Panel de Administración</h2>
+    <p><a href="/productos/agregar">Agregar nuevo producto</a></p>
+    <p><a href="/login">cerrar sesion</a></p>
+</div>
+
+<div class="tabla-contenedor">
+<table class="tabla-productos">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Estatus</th>
+            <th>Aumentar</th>
+            <th>Baja / Activar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for p in productos %}
+        <tr>
+            <td>
+                {% if p.ImagenRuta %}
+                    <img src="{{ p.ImagenRuta }}" class="img-producto">
+                {% else %}
+                    <span>Sin imagen</span>
+                {% endif %}
+            </td>
+
+            <td>{{ p.Nombre }}</td>
+            <td>{{ p.CantidadActual }}</td>
+
+            <td>
+                {% if p.Estatus == 1 %}
+                    <span class="activo">Activo</span>
+                {% else %}
+                    <span class="inactivo">Inactivo</span>
+                {% endif %}
+            </td>
+
+            <td>
+                <form action="/producto/entrada/{{ p.IdProducto }}" method="POST">
+                    <input type="number" name="cantidad" min="1" required>
+                    <button type="submit">+</button>
+                </form>
+            </td>
+
+            <td>
+                {% if p.Estatus == 1 %}
+                <a href="/producto/baja/{{ p.IdProducto }}">Dar de baja</a>
+                {% else %}
+                <a href="/producto/activar/{{ p.IdProducto }}">Activar</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><a href="/productos">volver</a></p>
+</div>
+
+</body>
+</html>
