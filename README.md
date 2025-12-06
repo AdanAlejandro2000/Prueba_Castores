@@ -4,6 +4,10 @@ Sistema de Inventario _ Flask + SQL Server
 
 Este proyecto es un sistema de control de inventario con roles de usuario (Administrador y Almacenista), gestión de productos, control de existencias bitácora de movimientos de entrada y salida. Construido con Flask, HTML/CSS, SQL Server y manejo de sesiones para control de permisos.
 
+python --version 3.11.9
+Microsoft SQL Server Developer (64-bit) -- 15.0.2000.5
+
+
 Sistema de Usuarios
 
 -   Registro e inicio de sesión.
