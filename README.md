@@ -6,6 +6,7 @@ Este proyecto es un sistema de control de inventario con roles de usuario (Admin
 
 python --version 3.11.9
 Microsoft SQL Server Developer (64-bit) -- 15.0.2000.5
+Visual Studio Code -- 15.0.2000.5
 
 
 Sistema de Usuarios
